@@ -8,15 +8,12 @@
     </head>
     <body>
         <div class="cabecera">
-            <table>
+            <table class="titulo">
                 <tr>
-                    <td><img src="img/logo.png" alt="Logo Iberia"></td>
-                    <td><h1>¡ENHORABUENA!</h1></td>
-                    <td></td>
+                    <td class="logo"><img src="img/logo.png" alt="Logo Iberia"></td>
+                    <td colspan="2"><h1>¡ENHORABUENA!</h1></td>
                 </tr>
             </table>
-            
-            
             <p class="intro">Ha sido seleccionado como parte de un sorteo promocional de <a href="https://www.iberia.com/">viajes iberia</a> 
             en el que usted podrá disfrutar de un viaje con todos los gastos pagados a un destino de su elección entre 6 opciones. 
             nacionales e internacionales. Para disfrutar de esta oportunidad tan solo tiene que rellenar el siguiente formulario</p>
@@ -27,81 +24,82 @@
                 <br>
                 ***Las fechas del vuelo pueden cambiar dada la actual condición de pandemia por COVID-19
             </p>
-            
         </div>
-        <form>
-            <table>
-                <tr>
-                    <td colspan="2">
-                        <h3>Datos personales</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="nombre">Nombre: </label></td>
-                    <td><input type="text" id="nombre" name="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="apellido1">Primer apellido: </label></td>
-                    <td><input type="text" id="apellido1" name="apellido1"></td>
-                </tr>
-                <tr>
-                    <td><label for="apellido2">Segundo apellido: </label></td>
-                    <td><input type="text" id="apellido2" name="apellido2"></td>
-                </tr>
-                <tr>
-                    <td><label for="email">Correo electrónico: </label></td>
-                    <td><input type="email" id="email" name="email"></td>
-                </tr>
-                <tr>
-                    <td><label for="telefono">Teléfono: </label></td>
-                    <td><input type="tel" id="telefono" name="telefono"></td>
-                </tr>
-                <tr>
-                    <td><label for="usuario">Nombre de usuario: </label></td>
-                    <td><input type="text" id="usuario" name="usuario"></td>
-                </tr>
-                <tr>
-                    <td><label for="nacimiento">Fecha de nacimiento: </label></td>
-                    <td><input type="date" id="nacimiento" name="nacimiento"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <h3>Datos sobre el viaje</h3>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="destino">Destino: </label></td>
-                    <td><select name="destino">
-                        <option selected value="0">Elige una opción</option>
-                        <optgroup label="España">
-                            <option value="1">Madrid</option>
-                            <option value="2">Barcelona</option>
-                            <option value="3">Sevilla</option>
-                        </optgroup>
-                        <optgroup label="Fuera de España">
-                            <option value="4">París</option>
-                            <option value="5">Roma</option>
-                            <option value="6">Amsterdan</option>
-                        </optgroup>
-                    </select></td>
-                </tr>
-                <tr>
-                    <td><label for="ida">Fecha de salida: </label></td>
-                    <td><input type="date" id="ida" name="ida"></td>
-                </tr>
-                <tr>
-                    <td><label for="vuelta">Fecha de regreso: </label></td>
-                    <td><input type="date" id="vuelta" name="vuelta"></td>
-                </tr>
-                <tr>
-                    <td><br></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="validar">
-                        <input type="submit" value="borrar">
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <br><br><br>
+        <div class="formulario">
+            <form>
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <h3>Datos personales</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="nombre">Nombre: </label></td>
+                        <td><input type="text" id="nombre" name="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="apellido1">Primer apellido: </label></td>
+                        <td><input type="text" id="apellido1" name="apellido1"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="apellido2">Segundo apellido: </label></td>
+                        <td><input type="text" id="apellido2" name="apellido2"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Correo electrónico: </label></td>
+                        <td><input type="email" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="telefono">Teléfono: </label></td>
+                        <td><input type="tel" id="telefono" name="telefono"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="usuario">Nombre de usuario: </label></td>
+                        <td><input type="text" id="usuario" name="usuario"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nacimiento">Fecha de nacimiento: </label></td>
+                        <td><input type="date" id="nacimiento" name="nacimiento"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h3>Datos sobre el viaje</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="destino">Destino: </label></td>
+                        <td><select name="destino">
+                            <option selected value="0">Elige una opción</option>
+                            <optgroup label="España">
+                                <option value="1">Madrid</option>
+                                <option value="2">Barcelona</option>
+                                <option value="3">Sevilla</option>
+                            </optgroup>
+                            <optgroup label="Fuera de España">
+                                <option value="4">París</option>
+                                <option value="5">Roma</option>
+                                <option value="6">Amsterdan</option>
+                            </optgroup>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ida">Fecha de salida: </label></td>
+                        <td><input type="date" id="ida" name="ida"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="vuelta">Fecha de regreso: </label></td>
+                        <td><input type="date" id="vuelta" name="vuelta"></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="borrar" class="botonBorrar"></td>
+                        <td><input type="submit" value="validar"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
     </body>

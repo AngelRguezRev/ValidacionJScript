@@ -1,7 +1,7 @@
 body{
-    background-color: lightyellow;
     margin-left: 10%;
     margin-right: 10%;
+    background-image: url(https://forums.x-plane.org/screenshots/monthly_08_2015/d5a5afea37c02d44efa977c89d15703b-a350_4.jpg);
 }
 
 .cabecera{
@@ -10,18 +10,53 @@ body{
     border: 1px;
     border-style: solid;
     padding: 5px;
+    background-color: lightyellow;
+    opacity: 0.9;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.titulo{
+    width: 100%;
+}
+
+.logo{
+    float: left;
+    padding-left: 50px;
+}
+
+h3{
+    text-align: center;
+}
+
+.formulario{
+    width: fit-content;
+    border: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    margin: auto;
+    background-color: lightgrey;
+    padding: 10px;
 }
 
 .intro, .bases{
     text-align: justify;
 }
 
+h1{
+    text-align: left;
+}
+
 .bases{
-    font-size: small;
+    font-size: 10px;
 }
 
 img{
     max-width: 150px;
     max-height: auto;
     position: relative;
+}
+
+.botonBorrar{
+    float: right;
 }
