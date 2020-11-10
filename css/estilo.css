@@ -1,0 +1,27 @@
+body{
+    background-color: lightyellow;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cabecera{
+    width: 100%;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
+.intro, .bases{
+    text-align: justify;
+}
+
+.bases{
+    font-size: small;
+}
+
+img{
+    max-width: 150px;
+    max-height: auto;
+    position: relative;
+}
