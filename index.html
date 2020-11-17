@@ -23,6 +23,8 @@
                 **La duración máxima del viaje sera de 5 días
                 <br>
                 ***Las fechas del vuelo pueden cambiar dada la actual condición de pandemia por COVID-19
+                <br>
+                ****Solo mayores de 18 años
             </p>
         </div>
         <br><br><br>
@@ -36,31 +38,31 @@
                     </tr>
                     <tr>
                         <td><label for="nombre">Nombre: </label></td>
-                        <td><input type="text" id="nombre" name="nombre"></td>
+                        <td><input type="text" id="nombre" name="nombre" required></td>
                     </tr>
                     <tr>
                         <td><label for="apellido1">Primer apellido: </label></td>
-                        <td><input type="text" id="apellido1" name="apellido1"></td>
+                        <td><input type="text" id="apellido1" name="apellido1" required></td>
                     </tr>
                     <tr>
                         <td><label for="apellido2">Segundo apellido: </label></td>
-                        <td><input type="text" id="apellido2" name="apellido2"></td>
+                        <td><input type="text" id="apellido2" name="apellido2" required></td>
                     </tr>
                     <tr>
                         <td><label for="email">Correo electrónico: </label></td>
-                        <td><input type="email" id="email" name="email"></td>
+                        <td><input type="email" id="email" name="email" required></td>
                     </tr>
                     <tr>
                         <td><label for="telefono">Teléfono: </label></td>
-                        <td><input type="tel" id="telefono" name="telefono"></td>
+                        <td><input type="tel" id="telefono" name="telefono" required></td>
                     </tr>
                     <tr>
                         <td><label for="usuario">Nombre de usuario: </label></td>
-                        <td><input type="text" id="usuario" name="usuario"></td>
+                        <td><input type="text" id="usuario" name="usuario" required></td>
                     </tr>
                     <tr>
                         <td><label for="nacimiento">Fecha de nacimiento: </label></td>
-                        <td><input type="date" id="nacimiento" name="nacimiento"></td>
+                        <td><input type="date" id="nacimiento" name="nacimiento" required></td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -69,8 +71,8 @@
                     </tr>
                     <tr>
                         <td><label for="destino">Destino: </label></td>
-                        <td><select name="destino">
-                            <option selected value="0">Elige una opción</option>
+                        <td><select name="destino" id="destino">
+                            <option disabled value="0" selected>Elige una opción</option>
                             <optgroup label="España">
                                 <option value="1">Madrid</option>
                                 <option value="2">Barcelona</option>
@@ -85,21 +87,21 @@
                     </tr>
                     <tr>
                         <td><label for="ida">Fecha de salida: </label></td>
-                        <td><input type="date" id="ida" name="ida"></td>
+                        <td><input type="date" id="ida" name="ida" required></td>
                     </tr>
                     <tr>
                         <td><label for="vuelta">Fecha de regreso: </label></td>
-                        <td><input type="date" id="vuelta" name="vuelta"></td>
+                        <td><input type="date" id="vuelta" name="vuelta" required></td>
                     </tr>
                     <tr>
                         <td><br></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="borrar" class="botonBorrar"></td>
-                        <td><input type="submit" value="validar"></td>
+                        <td><input type="submit" value="borrar" class="botonBorrar" onclick="borrar()"></td>
+                        <td><input type="submit" value="validar" onclick="validar()"></td>
                     </tr>
                 </table>
             </form>
         </div>
-        
+        <script src="js/javascript.js"/>
     </body>
