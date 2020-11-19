@@ -1,10 +1,18 @@
 //Este metodo borra todo el formulario mostrando un aviso al usuario
 function borrar(){
     alert("Se borrar el formulario");
+    window.location.reload();
 }
 
 //Este metodo gestiona la validacion del formulario
 function validar(){
+    document.getElementById("dni").style.backgroundColor="white";
+    document.getElementById("email").style.backgroundColor="white";
+    document.getElementById("telefono").style.backgroundColor="white";
+    document.getElementById("nacimiento").style.backgroundColor="white";
+    document.getElementById("destino").style.backgroundColor="white";
+    document.getElementById("ida").style.backgroundColor="white";
+    document.getElementById("vuelta").style.backgroundColor="white";
     let email=validaCorreo();
     let tlf=validaTelefono();
     let fNac=validaNacimiento();
@@ -12,37 +20,43 @@ function validar(){
     let salida=validaFechaSalida();
     let regreso=validaFechaRegreso();
     let dni=validaDNI();
-    console.log("DNI: "+dni);
     //Comprobamos que todos los campos esten validados
     if(email && tlf && fNac && dest && salida && regreso && dni){
         alert("Se enviaran los datos del formulario");
+        window.location.reload();
     }else{
-        //Si alguno no lo esta añadimos al alert un mensaje que indique cual es
-        let cad="";
+        //Si alguno no lo esta añadimos al alert un mensaje que indique cual es y teñimos la casilla de rojo
+        let cad="<ul>";
         if(!dni){
-            cad+="DNI Incorrecto, introduce uno valido\n";
+            document.getElementById("dni").style.backgroundColor="lightcoral";
+            cad+="<li>DNI Incorrecto, introduce uno valido</li>";
         }
         if(!email){
-            cad+="Email incorrecto, introduce uno valido\n";
+            document.getElementById("email").style.backgroundColor="lightcoral";
+            cad+="<li>Email incorrecto, introduce uno valido</li>";
         }
         if(!tlf){
-            cad+="Telefono incorrecto, introduce uno valido\n";
+            document.getElementById("telefono").style.backgroundColor="lightcoral";
+            cad+="<li>Telefono incorrecto, introduce uno valido</li>";
         }
         if(!fNac){
-            cad+="Fecha incorrecta. Este sorteo solo puede ser accedido por mayores de edad\n";
+            document.getElementById("nacimiento").style.backgroundColor="lightcoral";
+            cad+="<li>Fecha incorrecta. Este sorteo solo puede ser accedido por mayores de edad</li>";
         }
         if(!dest){
-            cad+="Destino incorrecto, por favor selecciona un destino\n";
+            document.getElementById("destino").style.backgroundColor="lightcoral";
+            cad+="<li>Destino incorrecto, por favor selecciona un destino</li>";
         }
         if(!salida){
-            cad+="Fecha de salida incorrecta. La fecha debe ser un dia a partir del día de cumplimentación del formulario\n";
+            document.getElementById("ida").style.backgroundColor="lightcoral";
+            cad+="<li>Fecha de salida incorrecta. La fecha debe ser un dia a partir del día de cumplimentación del formulario</li>";
         }
         if(!regreso){
-            cad+="Fecha de regreso incorrecta. La fecha de regreso debe ser como máximo 5 dias posterior"+
-            "a la de salida";
+            document.getElementById("vuelta").style.backgroundColor="lightcoral";
+            cad+="<li>Fecha de regreso incorrecta. La fecha de regreso debe ser como máximo 5 dias posterior"+
+            "a la de salida</li>";
         }
-        
-        alert(cad);
+        document.getElementById("errores").innerHTML=cad+"</ul>";
     }
 }
 
@@ -56,7 +70,7 @@ function validaDNI(){
     //Comprobamos que tiene la forma
     if(REGEX.test(dni)){
         //Si tiene la forma verificamos la letra
-        esValido=dni.charAt(8).toUpperCase()==LETRAS[parseInt(dni.substring(0,7))%23];
+        esValido=dni.charAt(8).toUpperCase()==LETRAS[parseInt(dni.substring(0,8))%23];
     }
     return esValido;
 }

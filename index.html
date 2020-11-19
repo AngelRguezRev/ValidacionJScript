@@ -29,7 +29,7 @@
         </div>
         <br><br><br>
         <div class="formulario">
-            <form>
+            <form onsubmit="return false">
                 <table>
                     <tr>
                         <td colspan="2">
@@ -98,7 +98,7 @@
                         <td><input type="date" id="vuelta" name="vuelta" required></td>
                     </tr>
                     <tr>
-                        <td><br></td>
+                        <td colspan="2"><p id="errores" class="errores"></p></td>
                     </tr>
                     <tr>
                         <td><input type="submit" value="borrar" class="botonBorrar" onclick="borrar()"></td>
