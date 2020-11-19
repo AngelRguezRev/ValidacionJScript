@@ -11,10 +11,17 @@ function validar(){
     let dest=validaDestino();
     let salida=validaFechaSalida();
     let regreso=validaFechaRegreso();
-    if(email && tlf && fNac && dest && salida && regreso){
+    let dni=validaDNI();
+    console.log("DNI: "+dni);
+    //Comprobamos que todos los campos esten validados
+    if(email && tlf && fNac && dest && salida && regreso && dni){
         alert("Se enviaran los datos del formulario");
     }else{
+        //Si alguno no lo esta añadimos al alert un mensaje que indique cual es
         let cad="";
+        if(!dni){
+            cad+="DNI Incorrecto, introduce uno valido\n";
+        }
         if(!email){
             cad+="Email incorrecto, introduce uno valido\n";
         }
@@ -34,8 +41,24 @@ function validar(){
             cad+="Fecha de regreso incorrecta. La fecha de regreso debe ser como máximo 5 dias posterior"+
             "a la de salida";
         }
+        
         alert(cad);
     }
+}
+
+//Funcion que valida el dni tanto por forma como por el digito de control
+// http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digito-de-control-del-nif-nie
+function validaDNI(){
+    const REGEX=/^(\d{8,8})+[A-Za-z]$/;
+    let LETRAS = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+    let dni=document.getElementById("dni").value;
+    let esValido=false;
+    //Comprobamos que tiene la forma
+    if(REGEX.test(dni)){
+        //Si tiene la forma verificamos la letra
+        esValido=dni.charAt(8).toUpperCase()==LETRAS[parseInt(dni.substring(0,7))%23];
+    }
+    return esValido;
 }
 
 //Este metodo valida el correo por medio de una expresion regular
