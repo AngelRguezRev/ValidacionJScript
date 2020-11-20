@@ -23,7 +23,7 @@ function validar(){
     //Comprobamos que todos los campos esten validados
     if(email && tlf && fNac && dest && salida && regreso && dni){
         alert("Se enviaran los datos del formulario");
-        window.location.reload();
+        window.location.replace("./resultado.html");
     }else{
         //Si alguno no lo esta añadimos al alert un mensaje que indique cual es y teñimos la casilla de rojo
         let cad="<ul>";
