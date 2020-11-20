@@ -116,10 +116,3 @@ function validaFechaRegreso(){
     let diferencia = Math.ceil(regreso-salida)/(1000*60*60*24);
     return diferencia>0 && diferencia<=5;
 }
-
-//Este metodo calcula la fecha del dia siguiente al que se solicita
-function fechaManana(){
-    let hoy = new Date();
-    hoy = hoy+(1000*60*60*24);
-    return hoy;
-}
